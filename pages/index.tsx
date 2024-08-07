@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { useRef } from "react";
 import { gsap, ScrollTrigger } from "@/helpers/gsap";
 import useIsomorphicLayoutEffect from "@/hooks/useIsomorphicLayoutEffect";
+import HomeHeroSection from "@/components/Home/HeroSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,10 +41,7 @@ export default function Home() {
       </Head>
 
       <main className={`main ${inter.className}`} ref={main}>
-        <section>
-          <h1>Section #1</h1>
-          <p>Lorem Ipsum</p>
-        </section>
+        <HomeHeroSection />
         <section>
           <h1>Section #2</h1>
           <p>Lorem Ipsum</p>
