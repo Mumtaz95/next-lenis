@@ -5,6 +5,8 @@ import { useRef } from "react";
 import { gsap, ScrollTrigger } from "@/helpers/gsap";
 import useIsomorphicLayoutEffect from "@/hooks/useIsomorphicLayoutEffect";
 import HomeHeroSection from "@/components/Home/HeroSection";
+import PitScene from "@/components/Home/PitScene";
+import MPhysicsScene from "@/components/Home/MPhysicsScene";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,7 +43,14 @@ export default function Home() {
       </Head>
 
       <main className={`main ${inter.className}`} ref={main}>
-        <HomeHeroSection />
+        {/* <HomeHeroSection /> */}
+        <section className="ball_pit">
+          <div className="ball_canvas">
+            <MPhysicsScene />
+            {/* <PitScene /> */}
+            {/* <BallScene /> */}
+          </div>
+        </section>
         <section>
           <h1>Section #2</h1>
           <p>Lorem Ipsum</p>
